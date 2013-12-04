@@ -19,6 +19,7 @@
     width: 800px;
     display: none;
     box-shadow: 2px 2px 5px #6C6C6C;
+    position: relative;
 }
 
 label {
@@ -79,4 +80,30 @@ input:focus{
 	text-align: center;
 }
 
+.close-form {
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
 
+.close-form:hover {
+	background: #EC9700;
+	cursor: pointer;
+}
+
+.show-form {
+    background: #C0C0C0;
+    border-radius: 5px;
+    display: none;
+    margin: 60px auto 0;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
