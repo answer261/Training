@@ -1,12 +1,19 @@
 var FormObject = {};
 
+/**
+ * 
+ * @param form - html object.
+ */
 FormObject.init = function (form) {
 	this.bindEvents(form);
 
 	this.showForm(form);
 
 }
-
+/**
+ * 
+ * @param form - html object.
+ */
 FormObject.showForm = function (form) {
 	form.fadeIn("slow");
 
@@ -14,7 +21,10 @@ FormObject.showForm = function (form) {
 		$(":input[type='color']").addClass("input-color");
 	}
 }
-
+/**
+ * 
+ * @param form - html object.
+ */
 FormObject.bindEvents = function (form) {
 	form.on("submit", function(event){
 		event.preventDefault();
@@ -22,6 +32,10 @@ FormObject.bindEvents = function (form) {
 	});
 }
 
+/**
+ * 
+ * @param form - html object.
+ */
 FormObject.submitForm = function(form){
 	if (FormObject.validator(form)) {
 		var status = {};
@@ -53,6 +67,8 @@ FormObject.submitForm = function(form){
 }
 
 FormObject.validator = function(form) {
+
+	//function return boolean value, true if form is valid, fasle if not
 	var valid = true,
 		invalidInputs = [],
 		status = {};
@@ -80,7 +96,11 @@ FormObject.validator = function(form) {
 		return valid;
 }
 
-
+/**
+ * function showStatus shows form status on the page
+ *
+ * @param status - associative array.
+ */
 FormObject.showStatus = function(status) {
 	$("#msg").attr("class", status["class"])
 			 .html(status["msg"]);
