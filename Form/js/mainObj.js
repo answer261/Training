@@ -61,7 +61,7 @@ var FormObject = {
 				}
 
 			}).fail(function(){
-				status.msg = "Something wrong heppened";
+				status.msg = "Something wrong happened";
 				status.class = "errorMsg";
 			});
 
@@ -69,7 +69,7 @@ var FormObject = {
 		}
 
 	},
-
+ 
 	validator: function() {
 
 		//function return boolean value, true if form is valid, fasle if not
